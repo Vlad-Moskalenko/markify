@@ -1,0 +1,59 @@
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 500;
+
+  color: var(--primary-txt-cl);
+
+  @include mq(tablet) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.header > .phone {
+  display: none;
+
+  &:focus,
+  &:hover {
+    color: var(--accent-cl);
+
+    transition: color var(--fast) linear;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+}
+
+.burger-menu{
+  line-height: 1;
+
+  transition: opacity var(--slow) linear, color var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    @include mq(tablet) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+}

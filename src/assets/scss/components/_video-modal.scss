@@ -1,0 +1,68 @@
+.video-modal {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--primary-txt-cl);
+
+  transition: visibility var(--fast) linear;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    z-index: -1;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    border: 6px solid var(--secondary-accent-cl);
+    border-color: var(--secondary-accent-cl) transparent var(--secondary-accent-cl) transparent;
+    animation: spinner 1.2s linear infinite;
+  }
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.video-content {
+  width: 246px;
+  height: 440px;
+
+  @include mq(tablet) {
+    width: 322px;
+    height: 572px;
+  }
+}
+
+.video-close-btn {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  background-color: var(--white);
+
+  cursor: pointer;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

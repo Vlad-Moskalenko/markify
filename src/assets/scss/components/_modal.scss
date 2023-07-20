@@ -1,0 +1,145 @@
+.backdrop {
+  padding: 20px;
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(34, 44, 48, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  overflow: auto;
+  transition: opacity var(--fast) linear, visibility var(--fast) linear;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  visibility: visible;
+  opacity: 1;
+
+  margin: auto;
+  transform: scale(1);
+
+  padding: 16px;
+  width: 272px;
+  max-width: 272px;
+
+  background-color: var(--white);
+  border-radius: 20px;
+
+  transition: transform 0.2s linear, opacity var(--fast) linear, visibility var(--fast) linear;
+
+  &.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @include mq(tablet) {
+    top: 50%;
+    left: 50%;
+    transform: scale(1);
+
+    padding: 60px 60px 40px 60px;
+    width: 618px;
+    max-width: 618px;
+  }
+
+  .is-hidden & {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+.modal__close-icon {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: var(--primary-txt-cl);
+  fill: var(--white);
+  cursor: pointer;
+
+  transition: color var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+
+  @include mq(tablet) {
+    width: 32px;
+    height: 32px;
+    right: 24px;
+    top: 24px;
+  }
+}
+
+.modal__button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 16px 64.5px;
+  @include mq(tablet) {
+    margin-top: 40px;
+    padding: 18px 56px;
+  }
+}
+
+.modal__title {
+  margin-top: 28px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--primary-txt-cl);
+  text-align: left;
+
+  @include mq(tablet) {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}
+
+.modal__item {
+  position: relative;
+  padding-left: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--secondary-txt-cl);
+}
+
+.modal__item:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+
+.modal__item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: var(--accent-cl);
+
+  @include mq(tablet) {
+    margin-right: 16px;
+  }
+}

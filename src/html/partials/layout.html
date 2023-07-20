@@ -1,0 +1,12 @@
+{% set lang = "en" %} {% set title = "MARKIFY" %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    {%include 'head.html' %}
+  </head>
+
+  <body>
+    <div class="page">{% block content %} {% endblock %}</div>
+  </body>
+</html>

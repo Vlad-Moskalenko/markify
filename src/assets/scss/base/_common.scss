@@ -1,0 +1,188 @@
+html {
+  box-sizing: border-box;
+
+  height: 100%;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+
+  font-family: var(--main-font);
+  color: var(--secondary-txt-cl);
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  background: var(--white);
+}
+
+html>body>.page {
+  height: 100%;
+  position: relative;
+  overflow: auto;
+
+  scroll-behavior: smooth;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.scroll-hidden {
+  overflow: hidden;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.section-title {
+  display: inline-block;
+
+  font-family: var(--title-font);
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+
+  color: var(--primary-txt-cl);
+
+  @include mq(tablet) {
+    margin-right: -40px;
+    display: inline-flex;
+    align-items: flex-end;
+
+    font-size: 36px;
+    line-height: 1.11;
+
+    &::after {
+      content: '';
+      position: relative;
+      width: 40px;
+      height: 80px;
+
+      background-image: url('../../assets/images/stars.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-family: var(--title-font);
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: capitalize;
+
+  color: var(--accent-cl);
+
+  &::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../../assets/images/icon-logo-mobile.svg');
+
+    @include mq(tablet) {
+      width: 44px;
+      height: 39px;
+
+      background-image: url('../../assets/images/icon-logo.svg');
+    }
+  }
+
+  @include mq(tablet) {
+    font-size: 18px;
+  }
+}
+
+.accent-btn {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+
+  color: var(--white);
+  background-color: var(--accent-cl);
+
+  border-radius: 30px;
+
+  transition: background-color var(--slow) linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn);
+  }
+
+  &:active {
+    background-color: var(--active-btn);
+  }
+
+  @include mq(tablet) {
+    padding: 18px 0;
+    min-height: 64px;
+    max-width: 250px;
+
+    font-size: 20px;
+  }
+}

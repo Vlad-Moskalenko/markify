@@ -1,0 +1,122 @@
+.advantages {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--secondary-bg);
+
+  @include mq(tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @include mq(tablet) {
+      gap: 40px;
+    }
+
+    @include mq(desktop) {
+      gap: 60px;
+    }
+  }
+
+  .section-subtitle {
+    margin-top: -8px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+
+    @include mq(tablet) {
+      margin-top: -18px;
+      max-width: 415px;
+      font-size: 18px;
+    }
+
+    @include mq(desktop) {
+      margin-top: -28px;
+      max-width: 567px;
+      font-size: 22px;
+      line-height: 1.36;
+    }
+  }
+}
+
+.advantages-list {
+  font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include mq(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+.advantages-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+
+  @include mq(tablet) {
+    max-width: 336px;
+    font-size: 22px;
+  }
+
+  @include mq(desktop) {
+    max-width: 384px;
+    font-size: 24px;
+  }
+}
+
+.advantages-item::before {
+  content: '';
+  display: inline-flex;
+  min-width: 74px;
+  height: 74px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mq(tablet) {
+    min-width: 104px;
+    height: 93px;
+  }
+}
+
+.advantages-item:nth-child(1)::before {
+  background-image: url('../../assets/images/advantages/shake-hands.svg');
+}
+
+.advantages-item:nth-child(2)::before {
+  background-image: url('../../assets/images/advantages/clock.svg');
+}
+
+.advantages-item:nth-child(3)::before {
+  background-image: url('../../assets/images/advantages/ok.svg');
+}
+
+.advantages-item:nth-child(4)::before {
+  background-image: url('../../assets/images/advantages/vacuum-cleaner.svg');
+}
+
+.advantages-item:nth-child(5)::before {
+  background-image: url('../../assets/images/advantages/spray.svg');
+}
+
+.advantages-item:nth-child(6)::before {
+  background-image: url('../../assets/images/advantages/calendar.svg');
+}

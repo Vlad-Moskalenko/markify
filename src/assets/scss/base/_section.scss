@@ -1,0 +1,11 @@
+.section {
+  margin-bottom: 40px;
+
+  @include mq(tablet) {
+    margin-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 80px;
+  }
+}

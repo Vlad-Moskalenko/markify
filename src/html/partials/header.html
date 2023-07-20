@@ -1,0 +1,16 @@
+<header id="header" class="header container">
+  <a href="" class="logo" aria-label="company logo" data-logo> total clean </a>
+  {% include 'components/nav-menu.html' %}
+  <a class="phone" href="tel:+447771703529" aria-label="company logo">
+    <svg class="phone-img" width="24px" height="24px">
+      <use href="./assets/images/sprite.svg#icon-phone"></use>
+    </svg>
+    +44 77 7170 3529
+  </a>
+  <button class="burger-menu" type="button" aria-label="navigation menu" data-burger-menu>
+    <svg aria-label="navigation menu icon">
+      <use href="./assets/images/sprite.svg#icon-burger"></use>
+    </svg>
+  </button>
+  {% include 'components/mobile-menu.html' %}
+</header>

@@ -1,0 +1,157 @@
+.reviews {
+  text-align: center;
+
+  @include mq(tablet-only){
+    max-width: 100%;
+  }
+}
+
+.reviews-list {
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  @include mq(tablet){
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.reviews-card {
+  text-align: left;
+
+  border: var(--border);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  color: var(--primary-txt-cl);
+
+  @include mq(tablet-only){
+    max-width: 280px;
+  }
+}
+
+.review-content {
+  position: relative;
+
+  background-color: var(--primary-bg);
+
+  img {
+    max-width: 280px;
+  }
+
+  p {
+    padding: 19px;
+
+    min-height: 280px;
+
+    line-height: 1.5;
+  }
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 17.5px 12.3px 17.5px 23px;
+  display: block;
+  width: 80px;
+  height: 80px;
+
+  background: rgba(var(--white-rgb), 0.5);
+
+  border: 2px solid var(--subtitle-txt-cl);
+  border-radius: 50%;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url('../../assets/images/reviews/play.svg');
+  }
+}
+
+.reviewer-avatar {
+  border-radius: 50%;
+}
+
+.reviewer-meta {
+  padding: 24px 20px 19px;
+
+  display: flex;
+  gap: 16px;
+
+  color: var(--secondary-txt-cl);
+}
+
+.reviewer-name {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rating {
+  display: flex;
+  gap: 8px;
+}
+
+#reviews {
+  .swiper-wrapper {
+    box-sizing: border-box;
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin: 0 auto;
+
+    line-height: 1;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 6px;
+    width: 24px;
+    height: 24px;
+
+    border: var(--border);
+    background: transparent;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    position: relative;
+  }
+
+  .swiper-pagination-bullet-active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: var(--accent-cl);
+  }
+
+  .swiper-pagination-bullets-dynamic {
+    transform: translate(0);
+  }
+}
+
+.close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -40px;
+  right: -40px;
+}
