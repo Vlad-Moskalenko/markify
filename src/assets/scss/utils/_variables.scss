@@ -1,39 +1,28 @@
 @function HexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
+  @return red($hex),
+  green($hex),
+  blue($hex);
 }
 
 :root {
-  --accent-cl: #FDB932;
-  --secondary-accent-cl: #B3EAFE;
+  --main: #7F3A6A;
+  --secondary: #E9A923;
 
   /* TEXT COLORS */
-  --primary-txt-cl: #1D1D1D;
-  --secondary-txt-cl: #222C30;
-  --disabled-txt-cl: #B9C8D6;
-  --copyright-txt-cl: #61747A;
-  --subtitle-txt-cl: #334A52;
+  --text-title: #313131;
+  --text-description: #585858;
+  --text-white: #FFFFFF;
 
   /* BACKGROUND COLORS */
-  --primary-bg: #D7F4FF;
-  --primary-bg-rgb: #{HexToRGB(#D7F4FF)};
-  --secondary-bg: #FFFFF3;
-  --secondary-bg-rgb: #{HexToRGB(#FFFFF3)};
-  --white: #ffffff;
-  --white-rgb: #{HexToRGB(#FFFFFF)};
-  --cleaning-bg: #FFDD98;
-  --teams-bg: #FFFFC5;
-
-  /*BUTTONS*/
-  --hover-btn: #FFC700;
-  --active-btn: #FFAA00;
-  --disabled-btn: #DDDDDD;
+  --bg-footer: #F9F1EE;
+  --bg-footer-rgb: #{HexToRGB(#F9F1EE)};
 
   /* BORDER */
-  --border: 1px solid rgba(51, 74, 82, 0.4);
+  --border-radius: 5px;
 
   /* FONTS */
-  --main-font: 'Nunito', sans-serif;
-  --title-font: 'Averia Libre', sans-serif;
+  --primary-font: 'OpenSans', sans-serif;
+  --secondary-font: 'Exo', sans-serif;
 
   /* ANIMATIONS SPEED */
   --fast: 0.2s;
