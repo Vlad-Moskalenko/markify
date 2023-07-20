@@ -130,36 +130,7 @@ button {
   }
 }
 
-.accent-btn {
-  display: block;
-  width: 100%;
-  padding: 16px 0;
-
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-
-  color: var(--white);
-  background-color: var(--accent-cl);
-
-  border-radius: 30px;
-
-  transition: background-color var(--slow) linear;
-
-  &:hover,
-  &:focus {
-    background-color: var(--hover-btn);
-  }
-
-  &:active {
-    background-color: var(--active-btn);
-  }
-
-  @include mq(tablet) {
-    padding: 18px 0;
-    min-height: 64px;
-    max-width: 250px;
-
-    font-size: 20px;
-  }
+.image {
+  margin: 0 auto;
+  width: 285px;
 }
