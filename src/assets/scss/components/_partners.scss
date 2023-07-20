@@ -1,0 +1,23 @@
+.partners__list {
+  margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.partners__item {
+  height: 104px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  background-color: var(--bg-partners);
+}
+
+.partners__img {
+  margin: 0 auto;
+  width: 285px;
+}
