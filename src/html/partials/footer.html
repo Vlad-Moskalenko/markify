@@ -1,32 +1,33 @@
-<footer class="footer">
-  <div class="container">
-    <div class="footer-meta">
-      <a href="#header" class="logo" aria-label="company logo"> total clean </a>
-      {% include 'components/nav-menu.html' %}
-      <ul class="social-list" data-social-media>
-        <li>
-          <button class="social-item" type="button" aria-label="facebook">
-            <svg aria-label="facebook">
-              <use href="./assets/images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button class="social-item" type="button" aria-label="instagram">
-            <svg aria-label="instagram">
-              <use href="./assets/images/sprite.svg#icon-instagram"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button class="social-item" type="button" aria-label="whatsapp">
-            <svg aria-label="whatsapp">
-              <use href="./assets/images/sprite.svg#icon-whatsapp"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-    <p class="copyright">Created by SoftRyzen</p>
+<footer class="footer container">
+  <a href="#header" aria-label="company logo">
+    <img class="logo" src="./assets/images/logo.svg" alt="company logo" />
+  </a>
+  {% include 'components/nav-menu.html' %}
+  <ul class="social__list">
+    <li>
+      <a href="" aria-label="facebook">
+        <svg class="social__icon" aria-label="facebook">
+          <use href="./assets/images/sprite.svg#icon-facebook"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="" aria-label="linkedin">
+        <svg class="social__icon" aria-label="facebook">
+          <use href="./assets/images/sprite.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="" aria-label="instagram">
+        <svg class="social__icon" aria-label="instagram">
+          <use href="./assets/images/sprite.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+  <div class="contacts">
+    <h3>contact us</h3>
+    <address>support@markify.com</address>
   </div>
 </footer>

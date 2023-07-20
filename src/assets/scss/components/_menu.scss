@@ -8,40 +8,8 @@
 
 .nav-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
 
   text-transform: capitalize;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-item::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-
-  display: block;
-  width: 0;
-  height: 2px;
-
-  border-radius: 2px;
-
-  transition: background-color var(--fast) linear, width var(--fast) linear;
-
-  @include mq(tablet) {
-    height: 4px;
-  }
-
-  @include mq(desktop) {
-    bottom: -25px;
-  }
-}
-
-.nav-item:hover {
-  &::after {
-    background-color: var(--accent-cl);
-    width: 100%;
-  }
 }
