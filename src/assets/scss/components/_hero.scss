@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 12px;
+  padding-top: 96px;
   padding-bottom: 24px;
   min-height: 1004px;
 
@@ -13,10 +13,8 @@
     font-size: 28px;
     text-align: left;
   }
-}
 
-.hero__img {
-  margin: 96px auto 40px;
-  width: 285px;
-  height: 285px;
+  .image {
+    margin-bottom: 40px;
+  }
 }

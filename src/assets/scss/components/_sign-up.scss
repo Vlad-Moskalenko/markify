@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 44px 16px;
+
+  text-align: center;
+
+  color: var(--text-white);
+  background-color: var(--main);
+
+  border-radius: 15px;
+
+  .title {
+    margin-bottom: 16px;
+
+    font-size: 28px;
+
+    color: var(--text-white);
+  }
+
+  .description {
+    margin: 0 auto 32px;
+    width: 194px;
+
+    color: var(--text-white);
+  }
+}
