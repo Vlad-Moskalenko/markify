@@ -18,20 +18,16 @@
   $mobile: 375px;
   $desktop: 1440px;
 
-  @if $range == mobile-only {
-    @media (max-width: ($tablet - 0.02)) {
-      @content;
-    }
-  } @else if $range == mobile {
-    @media (min-width: $mobile) {
+  @if $range == mobile {
+    @media (max-width: $mobile) {
       @content;
     }
   } @else if $range == desktop {
     @media (min-width: $desktop) {
       @content;
     }
-  } @else if $range == notDesktop {
-    @media (max-width: #{$desktop - 0.02}) {
+  } @else if $range == notMobile {
+    @media (min-width: #{$mobile + 0.02}) {
       @content;
     }
   } @else if $range == retina {

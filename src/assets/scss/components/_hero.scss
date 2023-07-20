@@ -1,138 +1,19 @@
 .hero {
-  position: relative;
+  padding-top: 12px;
+  padding-bottom: 24px;
+  min-height: 1004px;
 
-  overflow: hidden;
+  background-image: url('../images/hero/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top;
 
-  background-color: var(--primary-bg);
-
-  // background-image: url('../images/hero/lady.svg');
-  // background-repeat: no-repeat;
-  // background-position: top 20px center;
-  // background-size: 227px 174.6px;
-
-  // @include mq(tablet) {
-  //   background-image: url('../images/hero/lady.svg');
-  //   background-position: center left 52.4vw;
-  //   background-size: 601px 500px;
-  // }
-
-  // @include mq(desktop) {
-  //   background-image: url('../images/hero/lady.svg');
-  //   background-position: center left 48.5vw;
-  //   background-size: 656px 548px;
-  // }
-}
-
-.hero-meta {
-  padding: 216px 0 40px;
-  width: 100%;
-
-  @include mq(tablet) {
-    padding: 133px 0;
-    width: 360px;
-
-    background-image: url('../../assets/images/hero/star.svg'), url('../../assets/images/hero/star.svg'), url('../../assets/images/hero/star.svg');
-    background-repeat: no-repeat;
-    background-position: top 76.7px left, top 95px left 295px, top 135px left 335px;
-  }
-
-  @include mq(desktop) {
-    padding: 189px 0;
-    width: 592px;
-
-    background-position: top 133px left, top 152px left 341px, top 198.5px left 380px;
-  }
-}
-
-.title {
-  margin-bottom: 16px;
-
-  font-family: var(--title-font);
-  font-size: 32px;
-  line-height: 1.19;
-  font-weight: 400;
-
-  color: var(--primary-txt-cl);
-
-  @include mq(mobile-only){
-    text-align: center;
-  }
-
-  @include mq(tablet) {
+  .section-title {
     margin-bottom: 24px;
-    font-size: 44px;
-    line-height: 1.15;
-  }
-
-  @include mq(desktop) {
-    font-size: 52px;
   }
 }
 
-.subtitle {
-  margin-bottom: 24px;
-  font-size: 20px;
-
-  font-weight: 500;
-  line-height: 1.4;
-
-  color: var(--secondary-txt-cl);
-
-  @include mq(desktop) {
-    margin-bottom: 32px;
-
-    width: 500px;
-
-    font-size: 22px;
-    line-height: 1.36;
-  }
-}
-
-.bubble-bg {
-  position: absolute;
-  top: 0;
-  width: 272px;
-  height: 220px;
-
-  @include mq(tablet) {
-    left: 52.4vw;
-    width: 600px;
-    height: 600px;
-  }
-
-  @include mq(desktop) {
-    left: 48.5vw;
-    width: 700px;
-    height: 700px;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 24px;
-    right: 75px;
-
-    width: 120px;
-    height: 152px;
-
-    background-image: url('../images/hero/lady.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @include mq(tablet-only) {
-      top: 120px;
-      left: 43px;
-
-      width: 294px;
-      height: 395px;
-    }
-
-    @include mq(desktop) {
-      top: 130px;
-      right: 175px;
-
-      width: 336px;
-      height: 451px;
-    }
-  }
+.hero__img {
+  margin: 96px auto 40px;
+  width: 285px;
+  height: 285px;
 }

@@ -2,11 +2,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @include mq(tablet) {
-    margin-bottom: 60px;
-  }
-
   @include mq(desktop) {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 }
