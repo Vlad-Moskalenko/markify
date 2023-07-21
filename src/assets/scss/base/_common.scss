@@ -123,11 +123,6 @@ button {
 .logo {
   width: 145.5px;
   height: 36px;
-
-  @include mq(notMobile) {
-    width: 194px;
-    height: 48px;
-  }
 }
 
 .image {

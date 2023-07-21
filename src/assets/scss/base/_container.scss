@@ -1,10 +1,15 @@
 .container {
   width: 100%;
-  max-width: 375px;
   padding-left: 16px;
   padding-right: 16px;
   margin-right: auto;
   margin-left: auto;
+
+  @include mq(mobile) {
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   @include mq(desktop) {
     max-width: 1440px;
