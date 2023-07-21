@@ -131,11 +131,20 @@ button {
 .logo {
   width: 145.5px;
   height: 36px;
+
+  @include mq(desktop) {
+    width: 194px;
+    height: 48px;
+  }
 }
 
 .image {
   margin: 0 auto;
   width: 285px;
+
+  @include mq(desktop) {
+    width: 461px;
+  }
 }
 
 .accent-btn {
