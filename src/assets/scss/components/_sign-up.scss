@@ -14,6 +14,10 @@
     font-size: 28px;
 
     color: var(--text-white);
+
+    @include mq(desktop) {
+      font-size: 44px;
+    }
   }
 
   .description {
@@ -21,5 +25,13 @@
     width: 194px;
 
     color: var(--text-white);
+
+    @include mq(desktop) {
+      width: 100%;
+    }
+  }
+
+  @include mq(desktop) {
+    padding: 64px;
   }
 }
