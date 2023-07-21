@@ -22,7 +22,7 @@
 }
 
 .traffic-main {
-  width: 476px;
+  width: 100%;
 
   position: absolute;
   z-index: 10;
@@ -34,7 +34,6 @@
   background-color: var(--main);
 
   @include mq(desktop) {
-    width: 100%;
     transform: rotate(-5deg);
     background-color: var(--secondary)
   }

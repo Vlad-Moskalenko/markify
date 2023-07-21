@@ -14,11 +14,17 @@
 }
 
 .menu__container {
-  display: flex;
-  align-items: baseline;
-  gap: 64px;
+  display: none;
 
-  @include mq(mobile) {
+  @include mq(desktop) {
+    display: flex;
+    align-items: baseline;
+    gap: 64px;
+  }
+}
+
+.burger-menu {
+  @include mq(desktop) {
     display: none;
   }
 }

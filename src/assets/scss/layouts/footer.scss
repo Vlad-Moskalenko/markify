@@ -45,3 +45,13 @@
   line-height: 1.4;
   text-transform: capitalize;
 }
+
+.footer .nav-list {
+  flex-direction: column;
+  gap: 16px;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    gap: 46px;
+  }
+}
