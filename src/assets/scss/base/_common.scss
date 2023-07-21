@@ -109,6 +109,10 @@ button {
 
   color: var(--text-title);
   text-transform: capitalize;
+
+  @include mq(desktop) {
+    font-size: 32px
+  }
 }
 
 .subtitle {
@@ -117,6 +121,10 @@ button {
 
   font-size: 18px;
   text-align: left;
+
+  @include mq(desktop) {
+    font-size: 24px;
+  }
 }
 
 .description {
@@ -143,6 +151,7 @@ button {
   width: 285px;
 
   @include mq(desktop) {
+    margin: 0;
     width: 461px;
   }
 }
