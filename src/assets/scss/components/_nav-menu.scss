@@ -1,14 +1,28 @@
-.header > .nav {
-  display: none;
-
-  @include mq(desktop) {
-    display: block;
-  }
+.nav {
+  font-family: OpenSans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-description);
 }
 
 .nav-list {
   display: flex;
+  justify-content: center;
   gap: 46px;
 
   text-transform: capitalize;
+}
+
+.nav-item {
+  transition: color var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--secondary);
+  }
+}
+
+.header .nav-item:last-child {
+  display: none;
 }

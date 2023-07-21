@@ -2,15 +2,18 @@
   @include mq(desktop) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 121px;
   }
 }
 
-.services__list {
-  margin-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.services .title--left {
+  @include mq(desktop) {
+    text-align: left;
+  }
+}
 
+.services__meta {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
@@ -18,27 +21,45 @@
   text-align: center;
 
   color: var(--text-white);
+
+  @include mq(desktop) {
+    // flex-wrap: nowrap;
+  }
 }
 
-.services__item {
+.services__main {
   padding: 16px 24px;
+
   flex-direction: column;
-  flex-grow: 0.5;
   gap: 16px;
 
   border-radius: 10px;
 
-  background-color: var(--secondary);
+  background-color: var(--main);
 
-  &:first-child {
-    flex-basis: 100%;
-
-    background-color: var(--main);
-
-    & .services__title {
-      margin-bottom: 24px;
-    }
+  @include mq(desktop) {
+    padding: 24px;
+    width: 267px;
   }
+}
+
+.services__secondary-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include mq(desktop) {
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 24px;
+  }
+}
+
+.services__secondary {
+  @extend .services__main;
+
+  background-color: var(--secondary);
 }
 
 .services__title {
@@ -47,10 +68,40 @@
   font-size: 18px;
 
   text-transform: capitalize;
+
+  @include mq(desktop) {
+    margin-bottom: 24px;
+
+    font-size: 24px;
+  }
+}
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include mq(desktop) {
+    font-size: 18px;
+    gap: 24px;
+  }
+}
+
+.services__wrapper {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    width: 558px;
+    gap: 24px;
+  }
 }
 
 .subservices__list {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: space-around;
+
+  font-size: 18px;
 }

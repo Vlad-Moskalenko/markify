@@ -1,6 +1,10 @@
 .partners {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
   @include mq(desktop) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 121px;
@@ -15,7 +19,6 @@
 }
 
 .partners__list {
-  margin-bottom: 40px;
   max-width: 558px;
 
   display: flex;

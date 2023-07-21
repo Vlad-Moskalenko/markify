@@ -17,4 +17,9 @@
   display: flex;
   align-items: baseline;
   gap: 64px;
+
+  @include mq(mobile) {
+    display: none;
+  }
 }
+

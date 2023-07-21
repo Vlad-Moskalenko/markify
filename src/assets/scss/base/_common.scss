@@ -68,6 +68,10 @@ ul {
   background-position: top center;
   background-attachment: local;
   background-size: contain;
+
+  @include mq(desktop) {
+    background-image: url('../images/hero/bg-desktop.svg');
+  }
 }
 
 .visually-hidden {
@@ -168,4 +172,49 @@ button {
 
   border-radius: 5px;
   background: var(--secondary);
+
+  transition: background-color var(--fast) linear, color var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--main);
+    background-color: var(--bg-white);
+  }
+
+  @include mq(desktop) {
+    font-weight: 700 ;
+  }
+}
+
+.main-btn {
+  @extend .accent-btn;
+  width: 111px;
+
+  background-color: var(--main);
+  color: var(--text-white);
+
+  &:hover,
+  &:focus {
+    color: var(--text-white);
+    background-color: var(--secondary);
+  }
+}
+
+.text-underline {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    z-index: -1;
+
+    border-radius: 21px;
+    background-color: var(--secondary);
+  }
 }

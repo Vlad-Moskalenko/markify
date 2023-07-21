@@ -27,6 +27,14 @@
 .social__icon {
   width: 40px;
   height: 40px;
+  color: var(--main);
+
+  transition: color var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--secondary);
+  }
 }
 
 .contacts h3 {
