@@ -204,6 +204,8 @@ button {
   position: relative;
   z-index: 1;
 
+  white-space: nowrap;
+
   &::after {
     content: '';
     width: 100%;
@@ -216,5 +218,10 @@ button {
 
     border-radius: 21px;
     background-color: var(--secondary);
+
+    @include mq(desktop) {
+      height: 12px;
+      bottom: 6px;
+    }
   }
 }
