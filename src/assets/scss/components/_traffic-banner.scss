@@ -16,14 +16,15 @@
 }
 
 .traffic-main {
+  width: 476px;
+
   position: absolute;
   z-index: 10;
-  transform: rotate(-8deg);
-
-  width: 476px;
 
   display: flex;
 
+  overflow: hidden;
+  transform: rotate(-8deg);
   background-color: var(--main);
 }
 
