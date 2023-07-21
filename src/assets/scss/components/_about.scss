@@ -2,4 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    gap: 170px;
+  }
 }

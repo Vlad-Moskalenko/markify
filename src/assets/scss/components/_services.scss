@@ -1,3 +1,10 @@
+.services {
+  @include mq(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .services__list {
   margin-bottom: 40px;
   display: flex;
